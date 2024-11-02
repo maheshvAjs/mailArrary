@@ -9,3 +9,6 @@ Route::get('/', function () {
 
 
 Route::get('test',[TestController::class,'sendEmail']);
+
+Route::get('/attachments', [TestController::class, 'index'])->name('attachments.index');
+Route::get('/attachments/{filename}', [TestController::class, 'getAttachment']);
